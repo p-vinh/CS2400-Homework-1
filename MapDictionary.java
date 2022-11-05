@@ -1,14 +1,12 @@
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.Iterator;
 
 public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
     private Map<K, V> map;
 
-
     public MapDictionary() {
         map = new HashMap<>();
-
     }
 
     public V add(K key, V value) {
@@ -28,11 +26,11 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
     }
 
     public Iterator<K> getKeyIterator() {
-        return null;
+        return map.keySet().iterator();
     }
 
     public Iterator<V> getValueIterator() {
-        return null;
+        throw new UnsupportedOperationException("getValueIterator");
     }
 
     public boolean isEmpty() {
@@ -47,4 +45,5 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
         map.clear();
     }
 
+  
 }
