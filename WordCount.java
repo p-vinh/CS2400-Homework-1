@@ -3,7 +3,7 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class WordCount {
-    InterfaceDictionary<String, WordCount> dict;
+    private InterfaceDictionary<String, WordCount> dict;
     private int count;
 
     public WordCount() {
@@ -14,8 +14,7 @@ public class WordCount {
     public void readFile(Scanner scan) {
         scan.useDelimiter("\\W+");
         while (scan.hasNext()) {
-            String nextWord = scan.next();
-            nextWord = nextWord.toLowerCase();
+            String nextWord = scan.next().toLowerCase();
 
             if (!dict.contains(nextWord))
                 dict.add(nextWord, new WordCount());
