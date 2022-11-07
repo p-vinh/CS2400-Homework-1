@@ -41,7 +41,8 @@ public class WordCount {
 
         while (iterate.hasNext()) {
             String key = iterate.next();
-            System.out.printf("%s %n", dict.getValue(key).getCount() + "  " + key);
+
+            System.out.printf("%-3s %-3s\n", dict.getValue(key).getCount(), key);
         }
 
         System.out.println("Total = " + dict.getSize());
