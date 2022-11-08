@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.Iterator;
 
 public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
@@ -26,6 +27,7 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
 	}
 
 	public Iterator<K> getKeyIterator() {
+
 		return map.keySet().iterator();
 	}
 
@@ -45,4 +47,19 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
 		map.clear();
 	}
 
+	private class Iterator<T> {
+		private Iterator<T> iter;
+
+		private Iterator() {
+			iter = new Iterator<>();
+		}
+
+		private boolean hasNext() {
+			return iter.hasNext();
+		}
+
+		private T next() {
+			return iter.next();
+		}
+	}
 }
