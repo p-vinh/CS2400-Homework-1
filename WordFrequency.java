@@ -2,6 +2,7 @@ import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Iterator;
+
 public class WordFrequency {
     public static void main(String[] args) {
 		InterfaceDictionary<String, WordCount> dict = new MapDictionary<>();
