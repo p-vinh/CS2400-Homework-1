@@ -1,5 +1,4 @@
-import java.util.*;
-
+import java.util.Iterator;
 public interface InterfaceDictionary<K, V> {
     /**
      * Adds a new entry to this dictionary. If the given search key already
@@ -73,4 +72,5 @@ public interface InterfaceDictionary<K, V> {
 
     /** Removes all entries from this dictionary. */
     public void clear();
+
 }
