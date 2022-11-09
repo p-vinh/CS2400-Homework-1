@@ -25,7 +25,7 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
 	}
 
 	public Iterator<K> getKeyIterator() {
-		return new MapIterator<>();
+		return new KeyIterator<>();
 	}
 
 	public Iterator<V> getValueIterator() {
@@ -44,10 +44,10 @@ public class MapDictionary<K, V> implements InterfaceDictionary<K, V> {
 		map.clear();
 	}
 
-	public class MapIterator<T> implements Iterator<K> {
+	public class KeyIterator<T> implements Iterator<K> {
 		private Iterator<K> iterator;
 
-		public MapIterator() {
+		public KeyIterator() {
 			iterator = map.keySet().iterator();
 		}
 
